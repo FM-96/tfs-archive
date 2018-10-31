@@ -17,13 +17,13 @@ html
 					//- •
 					li.partial-item #{item.name}
 						if item.have && item.have.length > 0
-							p I have the following:
+							div I have the following:
 							ul.have
 								each title in item.have
 									//- ⁃ would be preferred, but square is also fine
 									li #{title}
 						else if item.except && item.except.length > 0
-							p I have everything #[strong except] the following:
+							div I have everything #[strong except] the following:
 							ul.except
 								each title in item.except
 									//- ◦
