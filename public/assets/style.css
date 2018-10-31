@@ -1,0 +1,15 @@
+.complete, .partial {
+	list-style-type: disc;
+}
+
+.except {
+	list-style-type: circle;
+}
+
+.have {
+	list-style-type: square;
+}
+
+.partial-item {
+	margin-bottom: 1em;
+}

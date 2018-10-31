@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+		title TheFlamingShark Reaction Archive
+		link(rel="stylesheet", href="/assets/style.css")
+	body
+		if complete && complete.length > 0
+			p I have TheFlamingShark's reactions to the following shows/movies in their entirety:
+			ul.complete
+				each item in complete
+					//- •
+					li #{item}
+		if partial && partial.length > 0
+			p I have TheFlamingShark's reactions to the following shows/movies partially:
+			ul.partial
+				each item in partial
+					//- •
+					li.partial-item #{item.name}
+						if item.have && item.have.length > 0
+							p I have the following:
+							ul.have
+								each title in item.have
+									//- ⁃ would be preferred, but square is also fine
+									li #{title}
+						else if item.except && item.except.length > 0
+							p I have everything #[strong except] the following:
+							ul.except
+								each title in item.except
+									//- ◦
+									li #{title}
